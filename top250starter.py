@@ -12,11 +12,9 @@ import re
 
 def main():
     ia = imdb.IMDb()
+    for movie in ia.get_top250_movies():
 
-    pattern = input("Enter movie search string: ")
-    for rank, movie in enumerate(ia.get_top250_movies(), start=1):
-
-        print(f"{rank:>4}: {movie}")
+        print(f"{movie}")
 
     return None
 
